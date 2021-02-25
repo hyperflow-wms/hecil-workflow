@@ -1,0 +1,8391 @@
+{
+  "name": "hecil214",
+  "processes": [
+    {
+      "name": "bwa_index",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stderr": "index.err",
+          "args": [
+            "index",
+            "ref.fasta"
+          ]
+        }
+      },
+      "ins": [
+        0
+      ],
+      "outs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "name": "fastq_reduce",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "fastq_reduce",
+          "args": [
+            "query.fastq",
+            "100"
+          ]
+        }
+      },
+      "ins": [
+        7
+      ],
+      "outs": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.0.sam",
+          "stderr": "mem.0.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.0"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        8
+      ],
+      "outs": [
+        109,
+        110
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.1.sam",
+          "stderr": "mem.1.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.1"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        9
+      ],
+      "outs": [
+        111,
+        112
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.2.sam",
+          "stderr": "mem.2.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.2"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        10
+      ],
+      "outs": [
+        113,
+        114
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.3.sam",
+          "stderr": "mem.3.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.3"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        11
+      ],
+      "outs": [
+        115,
+        116
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.4.sam",
+          "stderr": "mem.4.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.4"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        12
+      ],
+      "outs": [
+        117,
+        118
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.5.sam",
+          "stderr": "mem.5.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.5"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        13
+      ],
+      "outs": [
+        119,
+        120
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.6.sam",
+          "stderr": "mem.6.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.6"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        14
+      ],
+      "outs": [
+        121,
+        122
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.7.sam",
+          "stderr": "mem.7.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.7"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        15
+      ],
+      "outs": [
+        123,
+        124
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.8.sam",
+          "stderr": "mem.8.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.8"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        16
+      ],
+      "outs": [
+        125,
+        126
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.9.sam",
+          "stderr": "mem.9.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.9"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        17
+      ],
+      "outs": [
+        127,
+        128
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.10.sam",
+          "stderr": "mem.10.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.10"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        18
+      ],
+      "outs": [
+        129,
+        130
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.11.sam",
+          "stderr": "mem.11.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.11"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        19
+      ],
+      "outs": [
+        131,
+        132
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.12.sam",
+          "stderr": "mem.12.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.12"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        20
+      ],
+      "outs": [
+        133,
+        134
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.13.sam",
+          "stderr": "mem.13.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.13"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        21
+      ],
+      "outs": [
+        135,
+        136
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.14.sam",
+          "stderr": "mem.14.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.14"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        22
+      ],
+      "outs": [
+        137,
+        138
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.15.sam",
+          "stderr": "mem.15.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.15"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        23
+      ],
+      "outs": [
+        139,
+        140
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.16.sam",
+          "stderr": "mem.16.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.16"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        24
+      ],
+      "outs": [
+        141,
+        142
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.17.sam",
+          "stderr": "mem.17.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.17"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        25
+      ],
+      "outs": [
+        143,
+        144
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.18.sam",
+          "stderr": "mem.18.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.18"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        26
+      ],
+      "outs": [
+        145,
+        146
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.19.sam",
+          "stderr": "mem.19.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.19"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        27
+      ],
+      "outs": [
+        147,
+        148
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.20.sam",
+          "stderr": "mem.20.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.20"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        28
+      ],
+      "outs": [
+        149,
+        150
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.21.sam",
+          "stderr": "mem.21.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.21"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        29
+      ],
+      "outs": [
+        151,
+        152
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.22.sam",
+          "stderr": "mem.22.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.22"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        30
+      ],
+      "outs": [
+        153,
+        154
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.23.sam",
+          "stderr": "mem.23.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.23"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        31
+      ],
+      "outs": [
+        155,
+        156
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.24.sam",
+          "stderr": "mem.24.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.24"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        32
+      ],
+      "outs": [
+        157,
+        158
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.25.sam",
+          "stderr": "mem.25.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.25"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        33
+      ],
+      "outs": [
+        159,
+        160
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.26.sam",
+          "stderr": "mem.26.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.26"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        34
+      ],
+      "outs": [
+        161,
+        162
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.27.sam",
+          "stderr": "mem.27.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.27"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        35
+      ],
+      "outs": [
+        163,
+        164
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.28.sam",
+          "stderr": "mem.28.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.28"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        36
+      ],
+      "outs": [
+        165,
+        166
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.29.sam",
+          "stderr": "mem.29.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.29"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        37
+      ],
+      "outs": [
+        167,
+        168
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.30.sam",
+          "stderr": "mem.30.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.30"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        38
+      ],
+      "outs": [
+        169,
+        170
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.31.sam",
+          "stderr": "mem.31.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.31"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        39
+      ],
+      "outs": [
+        171,
+        172
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.32.sam",
+          "stderr": "mem.32.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.32"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        40
+      ],
+      "outs": [
+        173,
+        174
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.33.sam",
+          "stderr": "mem.33.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.33"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        41
+      ],
+      "outs": [
+        175,
+        176
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.34.sam",
+          "stderr": "mem.34.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.34"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        42
+      ],
+      "outs": [
+        177,
+        178
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.35.sam",
+          "stderr": "mem.35.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.35"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        43
+      ],
+      "outs": [
+        179,
+        180
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.36.sam",
+          "stderr": "mem.36.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.36"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        44
+      ],
+      "outs": [
+        181,
+        182
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.37.sam",
+          "stderr": "mem.37.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.37"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        45
+      ],
+      "outs": [
+        183,
+        184
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.38.sam",
+          "stderr": "mem.38.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.38"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        46
+      ],
+      "outs": [
+        185,
+        186
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.39.sam",
+          "stderr": "mem.39.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.39"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        47
+      ],
+      "outs": [
+        187,
+        188
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.40.sam",
+          "stderr": "mem.40.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.40"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        48
+      ],
+      "outs": [
+        189,
+        190
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.41.sam",
+          "stderr": "mem.41.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.41"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        49
+      ],
+      "outs": [
+        191,
+        192
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.42.sam",
+          "stderr": "mem.42.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.42"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        50
+      ],
+      "outs": [
+        193,
+        194
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.43.sam",
+          "stderr": "mem.43.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.43"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        51
+      ],
+      "outs": [
+        195,
+        196
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.44.sam",
+          "stderr": "mem.44.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.44"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        52
+      ],
+      "outs": [
+        197,
+        198
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.45.sam",
+          "stderr": "mem.45.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.45"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        53
+      ],
+      "outs": [
+        199,
+        200
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.46.sam",
+          "stderr": "mem.46.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.46"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        54
+      ],
+      "outs": [
+        201,
+        202
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.47.sam",
+          "stderr": "mem.47.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.47"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        55
+      ],
+      "outs": [
+        203,
+        204
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.48.sam",
+          "stderr": "mem.48.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.48"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        56
+      ],
+      "outs": [
+        205,
+        206
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.49.sam",
+          "stderr": "mem.49.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.49"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        57
+      ],
+      "outs": [
+        207,
+        208
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.50.sam",
+          "stderr": "mem.50.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.50"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        58
+      ],
+      "outs": [
+        209,
+        210
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.51.sam",
+          "stderr": "mem.51.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.51"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        59
+      ],
+      "outs": [
+        211,
+        212
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.52.sam",
+          "stderr": "mem.52.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.52"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        60
+      ],
+      "outs": [
+        213,
+        214
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.53.sam",
+          "stderr": "mem.53.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.53"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        61
+      ],
+      "outs": [
+        215,
+        216
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.54.sam",
+          "stderr": "mem.54.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.54"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        62
+      ],
+      "outs": [
+        217,
+        218
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.55.sam",
+          "stderr": "mem.55.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.55"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        63
+      ],
+      "outs": [
+        219,
+        220
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.56.sam",
+          "stderr": "mem.56.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.56"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        64
+      ],
+      "outs": [
+        221,
+        222
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.57.sam",
+          "stderr": "mem.57.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.57"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        65
+      ],
+      "outs": [
+        223,
+        224
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.58.sam",
+          "stderr": "mem.58.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.58"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        66
+      ],
+      "outs": [
+        225,
+        226
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.59.sam",
+          "stderr": "mem.59.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.59"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        67
+      ],
+      "outs": [
+        227,
+        228
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.60.sam",
+          "stderr": "mem.60.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.60"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        68
+      ],
+      "outs": [
+        229,
+        230
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.61.sam",
+          "stderr": "mem.61.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.61"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        69
+      ],
+      "outs": [
+        231,
+        232
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.62.sam",
+          "stderr": "mem.62.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.62"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        70
+      ],
+      "outs": [
+        233,
+        234
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.63.sam",
+          "stderr": "mem.63.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.63"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        71
+      ],
+      "outs": [
+        235,
+        236
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.64.sam",
+          "stderr": "mem.64.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.64"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        72
+      ],
+      "outs": [
+        237,
+        238
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.65.sam",
+          "stderr": "mem.65.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.65"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        73
+      ],
+      "outs": [
+        239,
+        240
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.66.sam",
+          "stderr": "mem.66.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.66"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        74
+      ],
+      "outs": [
+        241,
+        242
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.67.sam",
+          "stderr": "mem.67.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.67"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        75
+      ],
+      "outs": [
+        243,
+        244
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.68.sam",
+          "stderr": "mem.68.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.68"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        76
+      ],
+      "outs": [
+        245,
+        246
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.69.sam",
+          "stderr": "mem.69.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.69"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        77
+      ],
+      "outs": [
+        247,
+        248
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.70.sam",
+          "stderr": "mem.70.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.70"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        78
+      ],
+      "outs": [
+        249,
+        250
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.71.sam",
+          "stderr": "mem.71.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.71"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        79
+      ],
+      "outs": [
+        251,
+        252
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.72.sam",
+          "stderr": "mem.72.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.72"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        80
+      ],
+      "outs": [
+        253,
+        254
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.73.sam",
+          "stderr": "mem.73.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.73"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        81
+      ],
+      "outs": [
+        255,
+        256
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.74.sam",
+          "stderr": "mem.74.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.74"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        82
+      ],
+      "outs": [
+        257,
+        258
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.75.sam",
+          "stderr": "mem.75.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.75"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        83
+      ],
+      "outs": [
+        259,
+        260
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.76.sam",
+          "stderr": "mem.76.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.76"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        84
+      ],
+      "outs": [
+        261,
+        262
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.77.sam",
+          "stderr": "mem.77.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.77"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        85
+      ],
+      "outs": [
+        263,
+        264
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.78.sam",
+          "stderr": "mem.78.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.78"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        86
+      ],
+      "outs": [
+        265,
+        266
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.79.sam",
+          "stderr": "mem.79.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.79"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        87
+      ],
+      "outs": [
+        267,
+        268
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.80.sam",
+          "stderr": "mem.80.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.80"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        88
+      ],
+      "outs": [
+        269,
+        270
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.81.sam",
+          "stderr": "mem.81.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.81"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        89
+      ],
+      "outs": [
+        271,
+        272
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.82.sam",
+          "stderr": "mem.82.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.82"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        90
+      ],
+      "outs": [
+        273,
+        274
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.83.sam",
+          "stderr": "mem.83.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.83"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        91
+      ],
+      "outs": [
+        275,
+        276
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.84.sam",
+          "stderr": "mem.84.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.84"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        92
+      ],
+      "outs": [
+        277,
+        278
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.85.sam",
+          "stderr": "mem.85.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.85"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        93
+      ],
+      "outs": [
+        279,
+        280
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.86.sam",
+          "stderr": "mem.86.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.86"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        94
+      ],
+      "outs": [
+        281,
+        282
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.87.sam",
+          "stderr": "mem.87.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.87"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        95
+      ],
+      "outs": [
+        283,
+        284
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.88.sam",
+          "stderr": "mem.88.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.88"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        96
+      ],
+      "outs": [
+        285,
+        286
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.89.sam",
+          "stderr": "mem.89.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.89"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        97
+      ],
+      "outs": [
+        287,
+        288
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.90.sam",
+          "stderr": "mem.90.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.90"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        98
+      ],
+      "outs": [
+        289,
+        290
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.91.sam",
+          "stderr": "mem.91.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.91"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        99
+      ],
+      "outs": [
+        291,
+        292
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.92.sam",
+          "stderr": "mem.92.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.92"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        100
+      ],
+      "outs": [
+        293,
+        294
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.93.sam",
+          "stderr": "mem.93.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.93"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        101
+      ],
+      "outs": [
+        295,
+        296
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.94.sam",
+          "stderr": "mem.94.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.94"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        102
+      ],
+      "outs": [
+        297,
+        298
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.95.sam",
+          "stderr": "mem.95.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.95"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        103
+      ],
+      "outs": [
+        299,
+        300
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.96.sam",
+          "stderr": "mem.96.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.96"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        104
+      ],
+      "outs": [
+        301,
+        302
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.97.sam",
+          "stderr": "mem.97.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.97"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        105
+      ],
+      "outs": [
+        303,
+        304
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.98.sam",
+          "stderr": "mem.98.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.98"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        106
+      ],
+      "outs": [
+        305,
+        306
+      ]
+    },
+    {
+      "name": "bwa_mem",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "bwa",
+          "stdout": "Out.99.sam",
+          "stderr": "mem.99.err",
+          "args": [
+            "mem",
+            "ref.fasta",
+            "query.fastq.99"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        4,
+        3,
+        6,
+        5,
+        2,
+        107
+      ],
+      "outs": [
+        307,
+        308
+      ]
+    },
+    {
+      "name": "sam_cat.sh",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "sam_cat.sh",
+          "stdout": "Out.sam",
+          "args": [
+            "Out.*.sam"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        121,
+        123,
+        125,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        149,
+        151,
+        153,
+        155,
+        157,
+        159,
+        161,
+        163,
+        165,
+        167,
+        169,
+        171,
+        173,
+        175,
+        177,
+        179,
+        181,
+        183,
+        185,
+        187,
+        189,
+        191,
+        193,
+        195,
+        197,
+        199,
+        201,
+        203,
+        205,
+        207,
+        209,
+        211,
+        213,
+        215,
+        217,
+        219,
+        221,
+        223,
+        225,
+        227,
+        229,
+        231,
+        233,
+        235,
+        237,
+        239,
+        241,
+        243,
+        245,
+        247,
+        249,
+        251,
+        253,
+        255,
+        257,
+        259,
+        261,
+        263,
+        265,
+        267,
+        269,
+        271,
+        273,
+        275,
+        277,
+        279,
+        281,
+        283,
+        285,
+        287,
+        289,
+        291,
+        293,
+        295,
+        297,
+        299,
+        301,
+        303,
+        305,
+        307
+      ],
+      "outs": [
+        309
+      ]
+    },
+    {
+      "name": "merge_mem_err",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "cat",
+          "stdout": "mem.err",
+          "args": [
+            "mem.*.err"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        110,
+        112,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152,
+        154,
+        156,
+        158,
+        160,
+        162,
+        164,
+        166,
+        168,
+        170,
+        172,
+        174,
+        176,
+        178,
+        180,
+        182,
+        184,
+        186,
+        188,
+        190,
+        192,
+        194,
+        196,
+        198,
+        200,
+        202,
+        204,
+        206,
+        208,
+        210,
+        212,
+        214,
+        216,
+        218,
+        220,
+        222,
+        224,
+        226,
+        228,
+        230,
+        232,
+        234,
+        236,
+        238,
+        240,
+        242,
+        244,
+        246,
+        248,
+        250,
+        252,
+        254,
+        256,
+        258,
+        260,
+        262,
+        264,
+        266,
+        268,
+        270,
+        272,
+        274,
+        276,
+        278,
+        280,
+        282,
+        284,
+        286,
+        288,
+        290,
+        292,
+        294,
+        296,
+        298,
+        300,
+        302,
+        304,
+        306,
+        308
+      ],
+      "outs": [
+        310
+      ]
+    },
+    {
+      "name": "samtools_view",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "samtools",
+          "stderr": "sort.err",
+          "args": [
+            "view",
+            "-bS",
+            "Out.sam",
+            "|",
+            "samtools",
+            "sort",
+            "-",
+            "-o",
+            "Out.bam"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        309
+      ],
+      "outs": [
+        311,
+        312
+      ]
+    },
+    {
+      "name": "samtools_mpileup",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "samtools",
+          "stdout": "pileup.txt",
+          "stderr": "pileup.err",
+          "args": [
+            "mpileup",
+            "-s",
+            "-f",
+            "ref.fasta",
+            "Out.bam"
+          ]
+        }
+      },
+      "ins": [
+        108,
+        311
+      ],
+      "outs": [
+        313,
+        314,
+        315
+      ]
+    },
+    {
+      "name": "Split_Pileup.sh",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Split_Pileup.sh",
+          "stderr": "Split_Pileup.err",
+          "args": [
+            "pileup.txt",
+            "2"
+          ]
+        }
+      },
+      "ins": [
+        316,
+        313
+      ],
+      "outs": [
+        317,
+        318,
+        319
+      ]
+    },
+    {
+      "name": "Correction.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Correction.py",
+          "stdout": "corr.0.out",
+          "stderr": "corr.0.err",
+          "args": [
+            "Pileup_Set1.txt",
+            "ref.fasta",
+            "lc.0.out",
+            "Out.sam",
+            "100",
+            ";",
+            "echo",
+            "\"\"",
+            ">>",
+            "lc.0.out",
+            ";",
+            "echo",
+            "\"\"",
+            ">>",
+            "corr.0.err"
+          ]
+        }
+      },
+      "ins": [
+        318,
+        108,
+        309
+      ],
+      "outs": [
+        320,
+        321,
+        322
+      ]
+    },
+    {
+      "name": "Correction.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Correction.py",
+          "stdout": "corr.1.out",
+          "stderr": "corr.1.err",
+          "args": [
+            "Pileup_Set2.txt",
+            "ref.fasta",
+            "lc.1.out",
+            "Out.sam",
+            "100",
+            ";",
+            "echo",
+            "\"\"",
+            ">>",
+            "lc.1.out",
+            ";",
+            "echo",
+            "\"\"",
+            ">>",
+            "corr.1.err"
+          ]
+        }
+      },
+      "ins": [
+        319,
+        108,
+        309
+      ],
+      "outs": [
+        323,
+        324,
+        325
+      ]
+    },
+    {
+      "name": "merge_corr_out",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "cat",
+          "stdout": "corr.out",
+          "args": [
+            "corr.*.out",
+            ""
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        320,
+        323
+      ],
+      "outs": [
+        326
+      ]
+    },
+    {
+      "name": "merge_corr_err",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "cat",
+          "stdout": "corr.err",
+          "args": [
+            "corr.*.err"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        322,
+        325
+      ],
+      "outs": [
+        327
+      ]
+    },
+    {
+      "name": "merge_low_conf",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "cat",
+          "stdout": "LowConf.txt",
+          "args": [
+            "lc.*.out"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        321,
+        324
+      ],
+      "outs": [
+        328
+      ]
+    },
+    {
+      "name": "fasta_reduce",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "fasta_reduce",
+          "args": [
+            "ref.fasta",
+            "1000"
+          ]
+        }
+      },
+      "ins": [
+        108
+      ],
+      "outs": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409,
+        410,
+        411,
+        412,
+        413,
+        414,
+        415,
+        416,
+        417,
+        418,
+        419,
+        420,
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.0",
+          "args": [
+            "ref.fasta.0",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        329,
+        326
+      ],
+      "outs": [
+        429,
+        430
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.1",
+          "args": [
+            "ref.fasta.1",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        330,
+        326
+      ],
+      "outs": [
+        431,
+        432
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.2",
+          "args": [
+            "ref.fasta.2",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        331,
+        326
+      ],
+      "outs": [
+        433,
+        434
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.3",
+          "args": [
+            "ref.fasta.3",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        332,
+        326
+      ],
+      "outs": [
+        435,
+        436
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.4",
+          "args": [
+            "ref.fasta.4",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        333,
+        326
+      ],
+      "outs": [
+        437,
+        438
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.5",
+          "args": [
+            "ref.fasta.5",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        334,
+        326
+      ],
+      "outs": [
+        439,
+        440
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.6",
+          "args": [
+            "ref.fasta.6",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        335,
+        326
+      ],
+      "outs": [
+        441,
+        442
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.7",
+          "args": [
+            "ref.fasta.7",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        336,
+        326
+      ],
+      "outs": [
+        443,
+        444
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.8",
+          "args": [
+            "ref.fasta.8",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        337,
+        326
+      ],
+      "outs": [
+        445,
+        446
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.9",
+          "args": [
+            "ref.fasta.9",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        338,
+        326
+      ],
+      "outs": [
+        447,
+        448
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.10",
+          "args": [
+            "ref.fasta.10",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        339,
+        326
+      ],
+      "outs": [
+        449,
+        450
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.11",
+          "args": [
+            "ref.fasta.11",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        340,
+        326
+      ],
+      "outs": [
+        451,
+        452
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.12",
+          "args": [
+            "ref.fasta.12",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        341,
+        326
+      ],
+      "outs": [
+        453,
+        454
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.13",
+          "args": [
+            "ref.fasta.13",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        342,
+        326
+      ],
+      "outs": [
+        455,
+        456
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.14",
+          "args": [
+            "ref.fasta.14",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        343,
+        326
+      ],
+      "outs": [
+        457,
+        458
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.15",
+          "args": [
+            "ref.fasta.15",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        344,
+        326
+      ],
+      "outs": [
+        459,
+        460
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.16",
+          "args": [
+            "ref.fasta.16",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        345,
+        326
+      ],
+      "outs": [
+        461,
+        462
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.17",
+          "args": [
+            "ref.fasta.17",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        346,
+        326
+      ],
+      "outs": [
+        463,
+        464
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.18",
+          "args": [
+            "ref.fasta.18",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        347,
+        326
+      ],
+      "outs": [
+        465,
+        466
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.19",
+          "args": [
+            "ref.fasta.19",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        348,
+        326
+      ],
+      "outs": [
+        467,
+        468
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.20",
+          "args": [
+            "ref.fasta.20",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        349,
+        326
+      ],
+      "outs": [
+        469,
+        470
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.21",
+          "args": [
+            "ref.fasta.21",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        350,
+        326
+      ],
+      "outs": [
+        471,
+        472
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.22",
+          "args": [
+            "ref.fasta.22",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        351,
+        326
+      ],
+      "outs": [
+        473,
+        474
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.23",
+          "args": [
+            "ref.fasta.23",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        352,
+        326
+      ],
+      "outs": [
+        475,
+        476
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.24",
+          "args": [
+            "ref.fasta.24",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        353,
+        326
+      ],
+      "outs": [
+        477,
+        478
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.25",
+          "args": [
+            "ref.fasta.25",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        354,
+        326
+      ],
+      "outs": [
+        479,
+        480
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.26",
+          "args": [
+            "ref.fasta.26",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        355,
+        326
+      ],
+      "outs": [
+        481,
+        482
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.27",
+          "args": [
+            "ref.fasta.27",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        356,
+        326
+      ],
+      "outs": [
+        483,
+        484
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.28",
+          "args": [
+            "ref.fasta.28",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        357,
+        326
+      ],
+      "outs": [
+        485,
+        486
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.29",
+          "args": [
+            "ref.fasta.29",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        358,
+        326
+      ],
+      "outs": [
+        487,
+        488
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.30",
+          "args": [
+            "ref.fasta.30",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        359,
+        326
+      ],
+      "outs": [
+        489,
+        490
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.31",
+          "args": [
+            "ref.fasta.31",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        360,
+        326
+      ],
+      "outs": [
+        491,
+        492
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.32",
+          "args": [
+            "ref.fasta.32",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        361,
+        326
+      ],
+      "outs": [
+        493,
+        494
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.33",
+          "args": [
+            "ref.fasta.33",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        362,
+        326
+      ],
+      "outs": [
+        495,
+        496
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.34",
+          "args": [
+            "ref.fasta.34",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        363,
+        326
+      ],
+      "outs": [
+        497,
+        498
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.35",
+          "args": [
+            "ref.fasta.35",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        364,
+        326
+      ],
+      "outs": [
+        499,
+        500
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.36",
+          "args": [
+            "ref.fasta.36",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        365,
+        326
+      ],
+      "outs": [
+        501,
+        502
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.37",
+          "args": [
+            "ref.fasta.37",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        366,
+        326
+      ],
+      "outs": [
+        503,
+        504
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.38",
+          "args": [
+            "ref.fasta.38",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        367,
+        326
+      ],
+      "outs": [
+        505,
+        506
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.39",
+          "args": [
+            "ref.fasta.39",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        368,
+        326
+      ],
+      "outs": [
+        507,
+        508
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.40",
+          "args": [
+            "ref.fasta.40",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        369,
+        326
+      ],
+      "outs": [
+        509,
+        510
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.41",
+          "args": [
+            "ref.fasta.41",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        370,
+        326
+      ],
+      "outs": [
+        511,
+        512
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.42",
+          "args": [
+            "ref.fasta.42",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        371,
+        326
+      ],
+      "outs": [
+        513,
+        514
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.43",
+          "args": [
+            "ref.fasta.43",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        372,
+        326
+      ],
+      "outs": [
+        515,
+        516
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.44",
+          "args": [
+            "ref.fasta.44",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        373,
+        326
+      ],
+      "outs": [
+        517,
+        518
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.45",
+          "args": [
+            "ref.fasta.45",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        374,
+        326
+      ],
+      "outs": [
+        519,
+        520
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.46",
+          "args": [
+            "ref.fasta.46",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        375,
+        326
+      ],
+      "outs": [
+        521,
+        522
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.47",
+          "args": [
+            "ref.fasta.47",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        376,
+        326
+      ],
+      "outs": [
+        523,
+        524
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.48",
+          "args": [
+            "ref.fasta.48",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        377,
+        326
+      ],
+      "outs": [
+        525,
+        526
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.49",
+          "args": [
+            "ref.fasta.49",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        378,
+        326
+      ],
+      "outs": [
+        527,
+        528
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.50",
+          "args": [
+            "ref.fasta.50",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        379,
+        326
+      ],
+      "outs": [
+        529,
+        530
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.51",
+          "args": [
+            "ref.fasta.51",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        380,
+        326
+      ],
+      "outs": [
+        531,
+        532
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.52",
+          "args": [
+            "ref.fasta.52",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        381,
+        326
+      ],
+      "outs": [
+        533,
+        534
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.53",
+          "args": [
+            "ref.fasta.53",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        382,
+        326
+      ],
+      "outs": [
+        535,
+        536
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.54",
+          "args": [
+            "ref.fasta.54",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        383,
+        326
+      ],
+      "outs": [
+        537,
+        538
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.55",
+          "args": [
+            "ref.fasta.55",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        384,
+        326
+      ],
+      "outs": [
+        539,
+        540
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.56",
+          "args": [
+            "ref.fasta.56",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        385,
+        326
+      ],
+      "outs": [
+        541,
+        542
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.57",
+          "args": [
+            "ref.fasta.57",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        386,
+        326
+      ],
+      "outs": [
+        543,
+        544
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.58",
+          "args": [
+            "ref.fasta.58",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        387,
+        326
+      ],
+      "outs": [
+        545,
+        546
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.59",
+          "args": [
+            "ref.fasta.59",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        388,
+        326
+      ],
+      "outs": [
+        547,
+        548
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.60",
+          "args": [
+            "ref.fasta.60",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        389,
+        326
+      ],
+      "outs": [
+        549,
+        550
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.61",
+          "args": [
+            "ref.fasta.61",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        390,
+        326
+      ],
+      "outs": [
+        551,
+        552
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.62",
+          "args": [
+            "ref.fasta.62",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        391,
+        326
+      ],
+      "outs": [
+        553,
+        554
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.63",
+          "args": [
+            "ref.fasta.63",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        392,
+        326
+      ],
+      "outs": [
+        555,
+        556
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.64",
+          "args": [
+            "ref.fasta.64",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        393,
+        326
+      ],
+      "outs": [
+        557,
+        558
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.65",
+          "args": [
+            "ref.fasta.65",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        394,
+        326
+      ],
+      "outs": [
+        559,
+        560
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.66",
+          "args": [
+            "ref.fasta.66",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        395,
+        326
+      ],
+      "outs": [
+        561,
+        562
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.67",
+          "args": [
+            "ref.fasta.67",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        396,
+        326
+      ],
+      "outs": [
+        563,
+        564
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.68",
+          "args": [
+            "ref.fasta.68",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        397,
+        326
+      ],
+      "outs": [
+        565,
+        566
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.69",
+          "args": [
+            "ref.fasta.69",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        398,
+        326
+      ],
+      "outs": [
+        567,
+        568
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.70",
+          "args": [
+            "ref.fasta.70",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        399,
+        326
+      ],
+      "outs": [
+        569,
+        570
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.71",
+          "args": [
+            "ref.fasta.71",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        400,
+        326
+      ],
+      "outs": [
+        571,
+        572
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.72",
+          "args": [
+            "ref.fasta.72",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        401,
+        326
+      ],
+      "outs": [
+        573,
+        574
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.73",
+          "args": [
+            "ref.fasta.73",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        402,
+        326
+      ],
+      "outs": [
+        575,
+        576
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.74",
+          "args": [
+            "ref.fasta.74",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        403,
+        326
+      ],
+      "outs": [
+        577,
+        578
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.75",
+          "args": [
+            "ref.fasta.75",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        404,
+        326
+      ],
+      "outs": [
+        579,
+        580
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.76",
+          "args": [
+            "ref.fasta.76",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        405,
+        326
+      ],
+      "outs": [
+        581,
+        582
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.77",
+          "args": [
+            "ref.fasta.77",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        406,
+        326
+      ],
+      "outs": [
+        583,
+        584
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.78",
+          "args": [
+            "ref.fasta.78",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        407,
+        326
+      ],
+      "outs": [
+        585,
+        586
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.79",
+          "args": [
+            "ref.fasta.79",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        408,
+        326
+      ],
+      "outs": [
+        587,
+        588
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.80",
+          "args": [
+            "ref.fasta.80",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        409,
+        326
+      ],
+      "outs": [
+        589,
+        590
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.81",
+          "args": [
+            "ref.fasta.81",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        410,
+        326
+      ],
+      "outs": [
+        591,
+        592
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.82",
+          "args": [
+            "ref.fasta.82",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        411,
+        326
+      ],
+      "outs": [
+        593,
+        594
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.83",
+          "args": [
+            "ref.fasta.83",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        412,
+        326
+      ],
+      "outs": [
+        595,
+        596
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.84",
+          "args": [
+            "ref.fasta.84",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        413,
+        326
+      ],
+      "outs": [
+        597,
+        598
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.85",
+          "args": [
+            "ref.fasta.85",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        414,
+        326
+      ],
+      "outs": [
+        599,
+        600
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.86",
+          "args": [
+            "ref.fasta.86",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        415,
+        326
+      ],
+      "outs": [
+        601,
+        602
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.87",
+          "args": [
+            "ref.fasta.87",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        416,
+        326
+      ],
+      "outs": [
+        603,
+        604
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.88",
+          "args": [
+            "ref.fasta.88",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        417,
+        326
+      ],
+      "outs": [
+        605,
+        606
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.89",
+          "args": [
+            "ref.fasta.89",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        418,
+        326
+      ],
+      "outs": [
+        607,
+        608
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.90",
+          "args": [
+            "ref.fasta.90",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        419,
+        326
+      ],
+      "outs": [
+        609,
+        610
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.91",
+          "args": [
+            "ref.fasta.91",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        420,
+        326
+      ],
+      "outs": [
+        611,
+        612
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.92",
+          "args": [
+            "ref.fasta.92",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        421,
+        326
+      ],
+      "outs": [
+        613,
+        614
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.93",
+          "args": [
+            "ref.fasta.93",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        422,
+        326
+      ],
+      "outs": [
+        615,
+        616
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.94",
+          "args": [
+            "ref.fasta.94",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        423,
+        326
+      ],
+      "outs": [
+        617,
+        618
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.95",
+          "args": [
+            "ref.fasta.95",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        424,
+        326
+      ],
+      "outs": [
+        619,
+        620
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.96",
+          "args": [
+            "ref.fasta.96",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        425,
+        326
+      ],
+      "outs": [
+        621,
+        622
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.97",
+          "args": [
+            "ref.fasta.97",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        426,
+        326
+      ],
+      "outs": [
+        623,
+        624
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.98",
+          "args": [
+            "ref.fasta.98",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        427,
+        326
+      ],
+      "outs": [
+        625,
+        626
+      ]
+    },
+    {
+      "name": "Create_Corrected_AllLRReads.py",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "Create_Corrected_AllLRReads.py",
+          "stderr": "create.err.99",
+          "args": [
+            "ref.fasta.99",
+            "corr.out"
+          ]
+        }
+      },
+      "ins": [
+        428,
+        326
+      ],
+      "outs": [
+        627,
+        628
+      ]
+    },
+    {
+      "name": "merge_corrected",
+      "function": "{{function}}",
+      "type": "dataflow",
+      "firingLimit": 1,
+      "config": {
+        "executor": {
+          "executable": "cat",
+          "stdout": "Corrected_ref.fasta",
+          "args": [
+            "Corrected_ref.fasta.*"
+          ],
+          "shell": true
+        }
+      },
+      "ins": [
+        429,
+        431,
+        433,
+        435,
+        437,
+        439,
+        441,
+        443,
+        445,
+        447,
+        449,
+        451,
+        453,
+        455,
+        457,
+        459,
+        461,
+        463,
+        465,
+        467,
+        469,
+        471,
+        473,
+        475,
+        477,
+        479,
+        481,
+        483,
+        485,
+        487,
+        489,
+        491,
+        493,
+        495,
+        497,
+        499,
+        501,
+        503,
+        505,
+        507,
+        509,
+        511,
+        513,
+        515,
+        517,
+        519,
+        521,
+        523,
+        525,
+        527,
+        529,
+        531,
+        533,
+        535,
+        537,
+        539,
+        541,
+        543,
+        545,
+        547,
+        549,
+        551,
+        553,
+        555,
+        557,
+        559,
+        561,
+        563,
+        565,
+        567,
+        569,
+        571,
+        573,
+        575,
+        577,
+        579,
+        581,
+        583,
+        585,
+        587,
+        589,
+        591,
+        593,
+        595,
+        597,
+        599,
+        601,
+        603,
+        605,
+        607,
+        609,
+        611,
+        613,
+        615,
+        617,
+        619,
+        621,
+        623,
+        625,
+        627
+      ],
+      "outs": [
+        629
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "ref.fasta",
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "index.err"
+    },
+    {
+      "name": "ref.fasta.sa"
+    },
+    {
+      "name": "ref.fasta.pac"
+    },
+    {
+      "name": "ref.fasta.bwt"
+    },
+    {
+      "name": "ref.fasta.ann"
+    },
+    {
+      "name": "ref.fasta.amb"
+    },
+    {
+      "name": "query.fastq",
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "query.fastq.0"
+    },
+    {
+      "name": "query.fastq.1"
+    },
+    {
+      "name": "query.fastq.2"
+    },
+    {
+      "name": "query.fastq.3"
+    },
+    {
+      "name": "query.fastq.4"
+    },
+    {
+      "name": "query.fastq.5"
+    },
+    {
+      "name": "query.fastq.6"
+    },
+    {
+      "name": "query.fastq.7"
+    },
+    {
+      "name": "query.fastq.8"
+    },
+    {
+      "name": "query.fastq.9"
+    },
+    {
+      "name": "query.fastq.10"
+    },
+    {
+      "name": "query.fastq.11"
+    },
+    {
+      "name": "query.fastq.12"
+    },
+    {
+      "name": "query.fastq.13"
+    },
+    {
+      "name": "query.fastq.14"
+    },
+    {
+      "name": "query.fastq.15"
+    },
+    {
+      "name": "query.fastq.16"
+    },
+    {
+      "name": "query.fastq.17"
+    },
+    {
+      "name": "query.fastq.18"
+    },
+    {
+      "name": "query.fastq.19"
+    },
+    {
+      "name": "query.fastq.20"
+    },
+    {
+      "name": "query.fastq.21"
+    },
+    {
+      "name": "query.fastq.22"
+    },
+    {
+      "name": "query.fastq.23"
+    },
+    {
+      "name": "query.fastq.24"
+    },
+    {
+      "name": "query.fastq.25"
+    },
+    {
+      "name": "query.fastq.26"
+    },
+    {
+      "name": "query.fastq.27"
+    },
+    {
+      "name": "query.fastq.28"
+    },
+    {
+      "name": "query.fastq.29"
+    },
+    {
+      "name": "query.fastq.30"
+    },
+    {
+      "name": "query.fastq.31"
+    },
+    {
+      "name": "query.fastq.32"
+    },
+    {
+      "name": "query.fastq.33"
+    },
+    {
+      "name": "query.fastq.34"
+    },
+    {
+      "name": "query.fastq.35"
+    },
+    {
+      "name": "query.fastq.36"
+    },
+    {
+      "name": "query.fastq.37"
+    },
+    {
+      "name": "query.fastq.38"
+    },
+    {
+      "name": "query.fastq.39"
+    },
+    {
+      "name": "query.fastq.40"
+    },
+    {
+      "name": "query.fastq.41"
+    },
+    {
+      "name": "query.fastq.42"
+    },
+    {
+      "name": "query.fastq.43"
+    },
+    {
+      "name": "query.fastq.44"
+    },
+    {
+      "name": "query.fastq.45"
+    },
+    {
+      "name": "query.fastq.46"
+    },
+    {
+      "name": "query.fastq.47"
+    },
+    {
+      "name": "query.fastq.48"
+    },
+    {
+      "name": "query.fastq.49"
+    },
+    {
+      "name": "query.fastq.50"
+    },
+    {
+      "name": "query.fastq.51"
+    },
+    {
+      "name": "query.fastq.52"
+    },
+    {
+      "name": "query.fastq.53"
+    },
+    {
+      "name": "query.fastq.54"
+    },
+    {
+      "name": "query.fastq.55"
+    },
+    {
+      "name": "query.fastq.56"
+    },
+    {
+      "name": "query.fastq.57"
+    },
+    {
+      "name": "query.fastq.58"
+    },
+    {
+      "name": "query.fastq.59"
+    },
+    {
+      "name": "query.fastq.60"
+    },
+    {
+      "name": "query.fastq.61"
+    },
+    {
+      "name": "query.fastq.62"
+    },
+    {
+      "name": "query.fastq.63"
+    },
+    {
+      "name": "query.fastq.64"
+    },
+    {
+      "name": "query.fastq.65"
+    },
+    {
+      "name": "query.fastq.66"
+    },
+    {
+      "name": "query.fastq.67"
+    },
+    {
+      "name": "query.fastq.68"
+    },
+    {
+      "name": "query.fastq.69"
+    },
+    {
+      "name": "query.fastq.70"
+    },
+    {
+      "name": "query.fastq.71"
+    },
+    {
+      "name": "query.fastq.72"
+    },
+    {
+      "name": "query.fastq.73"
+    },
+    {
+      "name": "query.fastq.74"
+    },
+    {
+      "name": "query.fastq.75"
+    },
+    {
+      "name": "query.fastq.76"
+    },
+    {
+      "name": "query.fastq.77"
+    },
+    {
+      "name": "query.fastq.78"
+    },
+    {
+      "name": "query.fastq.79"
+    },
+    {
+      "name": "query.fastq.80"
+    },
+    {
+      "name": "query.fastq.81"
+    },
+    {
+      "name": "query.fastq.82"
+    },
+    {
+      "name": "query.fastq.83"
+    },
+    {
+      "name": "query.fastq.84"
+    },
+    {
+      "name": "query.fastq.85"
+    },
+    {
+      "name": "query.fastq.86"
+    },
+    {
+      "name": "query.fastq.87"
+    },
+    {
+      "name": "query.fastq.88"
+    },
+    {
+      "name": "query.fastq.89"
+    },
+    {
+      "name": "query.fastq.90"
+    },
+    {
+      "name": "query.fastq.91"
+    },
+    {
+      "name": "query.fastq.92"
+    },
+    {
+      "name": "query.fastq.93"
+    },
+    {
+      "name": "query.fastq.94"
+    },
+    {
+      "name": "query.fastq.95"
+    },
+    {
+      "name": "query.fastq.96"
+    },
+    {
+      "name": "query.fastq.97"
+    },
+    {
+      "name": "query.fastq.98"
+    },
+    {
+      "name": "query.fastq.99"
+    },
+    {
+      "name": "ref.fasta",
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "Out.0.sam"
+    },
+    {
+      "name": "mem.0.err"
+    },
+    {
+      "name": "Out.1.sam"
+    },
+    {
+      "name": "mem.1.err"
+    },
+    {
+      "name": "Out.2.sam"
+    },
+    {
+      "name": "mem.2.err"
+    },
+    {
+      "name": "Out.3.sam"
+    },
+    {
+      "name": "mem.3.err"
+    },
+    {
+      "name": "Out.4.sam"
+    },
+    {
+      "name": "mem.4.err"
+    },
+    {
+      "name": "Out.5.sam"
+    },
+    {
+      "name": "mem.5.err"
+    },
+    {
+      "name": "Out.6.sam"
+    },
+    {
+      "name": "mem.6.err"
+    },
+    {
+      "name": "Out.7.sam"
+    },
+    {
+      "name": "mem.7.err"
+    },
+    {
+      "name": "Out.8.sam"
+    },
+    {
+      "name": "mem.8.err"
+    },
+    {
+      "name": "Out.9.sam"
+    },
+    {
+      "name": "mem.9.err"
+    },
+    {
+      "name": "Out.10.sam"
+    },
+    {
+      "name": "mem.10.err"
+    },
+    {
+      "name": "Out.11.sam"
+    },
+    {
+      "name": "mem.11.err"
+    },
+    {
+      "name": "Out.12.sam"
+    },
+    {
+      "name": "mem.12.err"
+    },
+    {
+      "name": "Out.13.sam"
+    },
+    {
+      "name": "mem.13.err"
+    },
+    {
+      "name": "Out.14.sam"
+    },
+    {
+      "name": "mem.14.err"
+    },
+    {
+      "name": "Out.15.sam"
+    },
+    {
+      "name": "mem.15.err"
+    },
+    {
+      "name": "Out.16.sam"
+    },
+    {
+      "name": "mem.16.err"
+    },
+    {
+      "name": "Out.17.sam"
+    },
+    {
+      "name": "mem.17.err"
+    },
+    {
+      "name": "Out.18.sam"
+    },
+    {
+      "name": "mem.18.err"
+    },
+    {
+      "name": "Out.19.sam"
+    },
+    {
+      "name": "mem.19.err"
+    },
+    {
+      "name": "Out.20.sam"
+    },
+    {
+      "name": "mem.20.err"
+    },
+    {
+      "name": "Out.21.sam"
+    },
+    {
+      "name": "mem.21.err"
+    },
+    {
+      "name": "Out.22.sam"
+    },
+    {
+      "name": "mem.22.err"
+    },
+    {
+      "name": "Out.23.sam"
+    },
+    {
+      "name": "mem.23.err"
+    },
+    {
+      "name": "Out.24.sam"
+    },
+    {
+      "name": "mem.24.err"
+    },
+    {
+      "name": "Out.25.sam"
+    },
+    {
+      "name": "mem.25.err"
+    },
+    {
+      "name": "Out.26.sam"
+    },
+    {
+      "name": "mem.26.err"
+    },
+    {
+      "name": "Out.27.sam"
+    },
+    {
+      "name": "mem.27.err"
+    },
+    {
+      "name": "Out.28.sam"
+    },
+    {
+      "name": "mem.28.err"
+    },
+    {
+      "name": "Out.29.sam"
+    },
+    {
+      "name": "mem.29.err"
+    },
+    {
+      "name": "Out.30.sam"
+    },
+    {
+      "name": "mem.30.err"
+    },
+    {
+      "name": "Out.31.sam"
+    },
+    {
+      "name": "mem.31.err"
+    },
+    {
+      "name": "Out.32.sam"
+    },
+    {
+      "name": "mem.32.err"
+    },
+    {
+      "name": "Out.33.sam"
+    },
+    {
+      "name": "mem.33.err"
+    },
+    {
+      "name": "Out.34.sam"
+    },
+    {
+      "name": "mem.34.err"
+    },
+    {
+      "name": "Out.35.sam"
+    },
+    {
+      "name": "mem.35.err"
+    },
+    {
+      "name": "Out.36.sam"
+    },
+    {
+      "name": "mem.36.err"
+    },
+    {
+      "name": "Out.37.sam"
+    },
+    {
+      "name": "mem.37.err"
+    },
+    {
+      "name": "Out.38.sam"
+    },
+    {
+      "name": "mem.38.err"
+    },
+    {
+      "name": "Out.39.sam"
+    },
+    {
+      "name": "mem.39.err"
+    },
+    {
+      "name": "Out.40.sam"
+    },
+    {
+      "name": "mem.40.err"
+    },
+    {
+      "name": "Out.41.sam"
+    },
+    {
+      "name": "mem.41.err"
+    },
+    {
+      "name": "Out.42.sam"
+    },
+    {
+      "name": "mem.42.err"
+    },
+    {
+      "name": "Out.43.sam"
+    },
+    {
+      "name": "mem.43.err"
+    },
+    {
+      "name": "Out.44.sam"
+    },
+    {
+      "name": "mem.44.err"
+    },
+    {
+      "name": "Out.45.sam"
+    },
+    {
+      "name": "mem.45.err"
+    },
+    {
+      "name": "Out.46.sam"
+    },
+    {
+      "name": "mem.46.err"
+    },
+    {
+      "name": "Out.47.sam"
+    },
+    {
+      "name": "mem.47.err"
+    },
+    {
+      "name": "Out.48.sam"
+    },
+    {
+      "name": "mem.48.err"
+    },
+    {
+      "name": "Out.49.sam"
+    },
+    {
+      "name": "mem.49.err"
+    },
+    {
+      "name": "Out.50.sam"
+    },
+    {
+      "name": "mem.50.err"
+    },
+    {
+      "name": "Out.51.sam"
+    },
+    {
+      "name": "mem.51.err"
+    },
+    {
+      "name": "Out.52.sam"
+    },
+    {
+      "name": "mem.52.err"
+    },
+    {
+      "name": "Out.53.sam"
+    },
+    {
+      "name": "mem.53.err"
+    },
+    {
+      "name": "Out.54.sam"
+    },
+    {
+      "name": "mem.54.err"
+    },
+    {
+      "name": "Out.55.sam"
+    },
+    {
+      "name": "mem.55.err"
+    },
+    {
+      "name": "Out.56.sam"
+    },
+    {
+      "name": "mem.56.err"
+    },
+    {
+      "name": "Out.57.sam"
+    },
+    {
+      "name": "mem.57.err"
+    },
+    {
+      "name": "Out.58.sam"
+    },
+    {
+      "name": "mem.58.err"
+    },
+    {
+      "name": "Out.59.sam"
+    },
+    {
+      "name": "mem.59.err"
+    },
+    {
+      "name": "Out.60.sam"
+    },
+    {
+      "name": "mem.60.err"
+    },
+    {
+      "name": "Out.61.sam"
+    },
+    {
+      "name": "mem.61.err"
+    },
+    {
+      "name": "Out.62.sam"
+    },
+    {
+      "name": "mem.62.err"
+    },
+    {
+      "name": "Out.63.sam"
+    },
+    {
+      "name": "mem.63.err"
+    },
+    {
+      "name": "Out.64.sam"
+    },
+    {
+      "name": "mem.64.err"
+    },
+    {
+      "name": "Out.65.sam"
+    },
+    {
+      "name": "mem.65.err"
+    },
+    {
+      "name": "Out.66.sam"
+    },
+    {
+      "name": "mem.66.err"
+    },
+    {
+      "name": "Out.67.sam"
+    },
+    {
+      "name": "mem.67.err"
+    },
+    {
+      "name": "Out.68.sam"
+    },
+    {
+      "name": "mem.68.err"
+    },
+    {
+      "name": "Out.69.sam"
+    },
+    {
+      "name": "mem.69.err"
+    },
+    {
+      "name": "Out.70.sam"
+    },
+    {
+      "name": "mem.70.err"
+    },
+    {
+      "name": "Out.71.sam"
+    },
+    {
+      "name": "mem.71.err"
+    },
+    {
+      "name": "Out.72.sam"
+    },
+    {
+      "name": "mem.72.err"
+    },
+    {
+      "name": "Out.73.sam"
+    },
+    {
+      "name": "mem.73.err"
+    },
+    {
+      "name": "Out.74.sam"
+    },
+    {
+      "name": "mem.74.err"
+    },
+    {
+      "name": "Out.75.sam"
+    },
+    {
+      "name": "mem.75.err"
+    },
+    {
+      "name": "Out.76.sam"
+    },
+    {
+      "name": "mem.76.err"
+    },
+    {
+      "name": "Out.77.sam"
+    },
+    {
+      "name": "mem.77.err"
+    },
+    {
+      "name": "Out.78.sam"
+    },
+    {
+      "name": "mem.78.err"
+    },
+    {
+      "name": "Out.79.sam"
+    },
+    {
+      "name": "mem.79.err"
+    },
+    {
+      "name": "Out.80.sam"
+    },
+    {
+      "name": "mem.80.err"
+    },
+    {
+      "name": "Out.81.sam"
+    },
+    {
+      "name": "mem.81.err"
+    },
+    {
+      "name": "Out.82.sam"
+    },
+    {
+      "name": "mem.82.err"
+    },
+    {
+      "name": "Out.83.sam"
+    },
+    {
+      "name": "mem.83.err"
+    },
+    {
+      "name": "Out.84.sam"
+    },
+    {
+      "name": "mem.84.err"
+    },
+    {
+      "name": "Out.85.sam"
+    },
+    {
+      "name": "mem.85.err"
+    },
+    {
+      "name": "Out.86.sam"
+    },
+    {
+      "name": "mem.86.err"
+    },
+    {
+      "name": "Out.87.sam"
+    },
+    {
+      "name": "mem.87.err"
+    },
+    {
+      "name": "Out.88.sam"
+    },
+    {
+      "name": "mem.88.err"
+    },
+    {
+      "name": "Out.89.sam"
+    },
+    {
+      "name": "mem.89.err"
+    },
+    {
+      "name": "Out.90.sam"
+    },
+    {
+      "name": "mem.90.err"
+    },
+    {
+      "name": "Out.91.sam"
+    },
+    {
+      "name": "mem.91.err"
+    },
+    {
+      "name": "Out.92.sam"
+    },
+    {
+      "name": "mem.92.err"
+    },
+    {
+      "name": "Out.93.sam"
+    },
+    {
+      "name": "mem.93.err"
+    },
+    {
+      "name": "Out.94.sam"
+    },
+    {
+      "name": "mem.94.err"
+    },
+    {
+      "name": "Out.95.sam"
+    },
+    {
+      "name": "mem.95.err"
+    },
+    {
+      "name": "Out.96.sam"
+    },
+    {
+      "name": "mem.96.err"
+    },
+    {
+      "name": "Out.97.sam"
+    },
+    {
+      "name": "mem.97.err"
+    },
+    {
+      "name": "Out.98.sam"
+    },
+    {
+      "name": "mem.98.err"
+    },
+    {
+      "name": "Out.99.sam"
+    },
+    {
+      "name": "mem.99.err"
+    },
+    {
+      "name": "Out.sam"
+    },
+    {
+      "name": "mem.err"
+    },
+    {
+      "name": "Out.bam"
+    },
+    {
+      "name": "sort.err"
+    },
+    {
+      "name": "pileup.txt"
+    },
+    {
+      "name": "ref.fasta.fai"
+    },
+    {
+      "name": "pileup.err"
+    },
+    {
+      "name": "Create_SubsetPileup.sh",
+      "data": [
+        {}
+      ]
+    },
+    {
+      "name": "List_RefHeader.txt"
+    },
+    {
+      "name": "Pileup_Set1.txt"
+    },
+    {
+      "name": "Pileup_Set2.txt"
+    },
+    {
+      "name": "corr.0.out"
+    },
+    {
+      "name": "lc.0.out"
+    },
+    {
+      "name": "corr.0.err"
+    },
+    {
+      "name": "corr.1.out"
+    },
+    {
+      "name": "lc.1.out"
+    },
+    {
+      "name": "corr.1.err"
+    },
+    {
+      "name": "corr.out"
+    },
+    {
+      "name": "corr.err"
+    },
+    {
+      "name": "LowConf.txt"
+    },
+    {
+      "name": "ref.fasta.0"
+    },
+    {
+      "name": "ref.fasta.1"
+    },
+    {
+      "name": "ref.fasta.2"
+    },
+    {
+      "name": "ref.fasta.3"
+    },
+    {
+      "name": "ref.fasta.4"
+    },
+    {
+      "name": "ref.fasta.5"
+    },
+    {
+      "name": "ref.fasta.6"
+    },
+    {
+      "name": "ref.fasta.7"
+    },
+    {
+      "name": "ref.fasta.8"
+    },
+    {
+      "name": "ref.fasta.9"
+    },
+    {
+      "name": "ref.fasta.10"
+    },
+    {
+      "name": "ref.fasta.11"
+    },
+    {
+      "name": "ref.fasta.12"
+    },
+    {
+      "name": "ref.fasta.13"
+    },
+    {
+      "name": "ref.fasta.14"
+    },
+    {
+      "name": "ref.fasta.15"
+    },
+    {
+      "name": "ref.fasta.16"
+    },
+    {
+      "name": "ref.fasta.17"
+    },
+    {
+      "name": "ref.fasta.18"
+    },
+    {
+      "name": "ref.fasta.19"
+    },
+    {
+      "name": "ref.fasta.20"
+    },
+    {
+      "name": "ref.fasta.21"
+    },
+    {
+      "name": "ref.fasta.22"
+    },
+    {
+      "name": "ref.fasta.23"
+    },
+    {
+      "name": "ref.fasta.24"
+    },
+    {
+      "name": "ref.fasta.25"
+    },
+    {
+      "name": "ref.fasta.26"
+    },
+    {
+      "name": "ref.fasta.27"
+    },
+    {
+      "name": "ref.fasta.28"
+    },
+    {
+      "name": "ref.fasta.29"
+    },
+    {
+      "name": "ref.fasta.30"
+    },
+    {
+      "name": "ref.fasta.31"
+    },
+    {
+      "name": "ref.fasta.32"
+    },
+    {
+      "name": "ref.fasta.33"
+    },
+    {
+      "name": "ref.fasta.34"
+    },
+    {
+      "name": "ref.fasta.35"
+    },
+    {
+      "name": "ref.fasta.36"
+    },
+    {
+      "name": "ref.fasta.37"
+    },
+    {
+      "name": "ref.fasta.38"
+    },
+    {
+      "name": "ref.fasta.39"
+    },
+    {
+      "name": "ref.fasta.40"
+    },
+    {
+      "name": "ref.fasta.41"
+    },
+    {
+      "name": "ref.fasta.42"
+    },
+    {
+      "name": "ref.fasta.43"
+    },
+    {
+      "name": "ref.fasta.44"
+    },
+    {
+      "name": "ref.fasta.45"
+    },
+    {
+      "name": "ref.fasta.46"
+    },
+    {
+      "name": "ref.fasta.47"
+    },
+    {
+      "name": "ref.fasta.48"
+    },
+    {
+      "name": "ref.fasta.49"
+    },
+    {
+      "name": "ref.fasta.50"
+    },
+    {
+      "name": "ref.fasta.51"
+    },
+    {
+      "name": "ref.fasta.52"
+    },
+    {
+      "name": "ref.fasta.53"
+    },
+    {
+      "name": "ref.fasta.54"
+    },
+    {
+      "name": "ref.fasta.55"
+    },
+    {
+      "name": "ref.fasta.56"
+    },
+    {
+      "name": "ref.fasta.57"
+    },
+    {
+      "name": "ref.fasta.58"
+    },
+    {
+      "name": "ref.fasta.59"
+    },
+    {
+      "name": "ref.fasta.60"
+    },
+    {
+      "name": "ref.fasta.61"
+    },
+    {
+      "name": "ref.fasta.62"
+    },
+    {
+      "name": "ref.fasta.63"
+    },
+    {
+      "name": "ref.fasta.64"
+    },
+    {
+      "name": "ref.fasta.65"
+    },
+    {
+      "name": "ref.fasta.66"
+    },
+    {
+      "name": "ref.fasta.67"
+    },
+    {
+      "name": "ref.fasta.68"
+    },
+    {
+      "name": "ref.fasta.69"
+    },
+    {
+      "name": "ref.fasta.70"
+    },
+    {
+      "name": "ref.fasta.71"
+    },
+    {
+      "name": "ref.fasta.72"
+    },
+    {
+      "name": "ref.fasta.73"
+    },
+    {
+      "name": "ref.fasta.74"
+    },
+    {
+      "name": "ref.fasta.75"
+    },
+    {
+      "name": "ref.fasta.76"
+    },
+    {
+      "name": "ref.fasta.77"
+    },
+    {
+      "name": "ref.fasta.78"
+    },
+    {
+      "name": "ref.fasta.79"
+    },
+    {
+      "name": "ref.fasta.80"
+    },
+    {
+      "name": "ref.fasta.81"
+    },
+    {
+      "name": "ref.fasta.82"
+    },
+    {
+      "name": "ref.fasta.83"
+    },
+    {
+      "name": "ref.fasta.84"
+    },
+    {
+      "name": "ref.fasta.85"
+    },
+    {
+      "name": "ref.fasta.86"
+    },
+    {
+      "name": "ref.fasta.87"
+    },
+    {
+      "name": "ref.fasta.88"
+    },
+    {
+      "name": "ref.fasta.89"
+    },
+    {
+      "name": "ref.fasta.90"
+    },
+    {
+      "name": "ref.fasta.91"
+    },
+    {
+      "name": "ref.fasta.92"
+    },
+    {
+      "name": "ref.fasta.93"
+    },
+    {
+      "name": "ref.fasta.94"
+    },
+    {
+      "name": "ref.fasta.95"
+    },
+    {
+      "name": "ref.fasta.96"
+    },
+    {
+      "name": "ref.fasta.97"
+    },
+    {
+      "name": "ref.fasta.98"
+    },
+    {
+      "name": "ref.fasta.99"
+    },
+    {
+      "name": "Corrected_ref.fasta.0"
+    },
+    {
+      "name": "create.err.0"
+    },
+    {
+      "name": "Corrected_ref.fasta.1"
+    },
+    {
+      "name": "create.err.1"
+    },
+    {
+      "name": "Corrected_ref.fasta.2"
+    },
+    {
+      "name": "create.err.2"
+    },
+    {
+      "name": "Corrected_ref.fasta.3"
+    },
+    {
+      "name": "create.err.3"
+    },
+    {
+      "name": "Corrected_ref.fasta.4"
+    },
+    {
+      "name": "create.err.4"
+    },
+    {
+      "name": "Corrected_ref.fasta.5"
+    },
+    {
+      "name": "create.err.5"
+    },
+    {
+      "name": "Corrected_ref.fasta.6"
+    },
+    {
+      "name": "create.err.6"
+    },
+    {
+      "name": "Corrected_ref.fasta.7"
+    },
+    {
+      "name": "create.err.7"
+    },
+    {
+      "name": "Corrected_ref.fasta.8"
+    },
+    {
+      "name": "create.err.8"
+    },
+    {
+      "name": "Corrected_ref.fasta.9"
+    },
+    {
+      "name": "create.err.9"
+    },
+    {
+      "name": "Corrected_ref.fasta.10"
+    },
+    {
+      "name": "create.err.10"
+    },
+    {
+      "name": "Corrected_ref.fasta.11"
+    },
+    {
+      "name": "create.err.11"
+    },
+    {
+      "name": "Corrected_ref.fasta.12"
+    },
+    {
+      "name": "create.err.12"
+    },
+    {
+      "name": "Corrected_ref.fasta.13"
+    },
+    {
+      "name": "create.err.13"
+    },
+    {
+      "name": "Corrected_ref.fasta.14"
+    },
+    {
+      "name": "create.err.14"
+    },
+    {
+      "name": "Corrected_ref.fasta.15"
+    },
+    {
+      "name": "create.err.15"
+    },
+    {
+      "name": "Corrected_ref.fasta.16"
+    },
+    {
+      "name": "create.err.16"
+    },
+    {
+      "name": "Corrected_ref.fasta.17"
+    },
+    {
+      "name": "create.err.17"
+    },
+    {
+      "name": "Corrected_ref.fasta.18"
+    },
+    {
+      "name": "create.err.18"
+    },
+    {
+      "name": "Corrected_ref.fasta.19"
+    },
+    {
+      "name": "create.err.19"
+    },
+    {
+      "name": "Corrected_ref.fasta.20"
+    },
+    {
+      "name": "create.err.20"
+    },
+    {
+      "name": "Corrected_ref.fasta.21"
+    },
+    {
+      "name": "create.err.21"
+    },
+    {
+      "name": "Corrected_ref.fasta.22"
+    },
+    {
+      "name": "create.err.22"
+    },
+    {
+      "name": "Corrected_ref.fasta.23"
+    },
+    {
+      "name": "create.err.23"
+    },
+    {
+      "name": "Corrected_ref.fasta.24"
+    },
+    {
+      "name": "create.err.24"
+    },
+    {
+      "name": "Corrected_ref.fasta.25"
+    },
+    {
+      "name": "create.err.25"
+    },
+    {
+      "name": "Corrected_ref.fasta.26"
+    },
+    {
+      "name": "create.err.26"
+    },
+    {
+      "name": "Corrected_ref.fasta.27"
+    },
+    {
+      "name": "create.err.27"
+    },
+    {
+      "name": "Corrected_ref.fasta.28"
+    },
+    {
+      "name": "create.err.28"
+    },
+    {
+      "name": "Corrected_ref.fasta.29"
+    },
+    {
+      "name": "create.err.29"
+    },
+    {
+      "name": "Corrected_ref.fasta.30"
+    },
+    {
+      "name": "create.err.30"
+    },
+    {
+      "name": "Corrected_ref.fasta.31"
+    },
+    {
+      "name": "create.err.31"
+    },
+    {
+      "name": "Corrected_ref.fasta.32"
+    },
+    {
+      "name": "create.err.32"
+    },
+    {
+      "name": "Corrected_ref.fasta.33"
+    },
+    {
+      "name": "create.err.33"
+    },
+    {
+      "name": "Corrected_ref.fasta.34"
+    },
+    {
+      "name": "create.err.34"
+    },
+    {
+      "name": "Corrected_ref.fasta.35"
+    },
+    {
+      "name": "create.err.35"
+    },
+    {
+      "name": "Corrected_ref.fasta.36"
+    },
+    {
+      "name": "create.err.36"
+    },
+    {
+      "name": "Corrected_ref.fasta.37"
+    },
+    {
+      "name": "create.err.37"
+    },
+    {
+      "name": "Corrected_ref.fasta.38"
+    },
+    {
+      "name": "create.err.38"
+    },
+    {
+      "name": "Corrected_ref.fasta.39"
+    },
+    {
+      "name": "create.err.39"
+    },
+    {
+      "name": "Corrected_ref.fasta.40"
+    },
+    {
+      "name": "create.err.40"
+    },
+    {
+      "name": "Corrected_ref.fasta.41"
+    },
+    {
+      "name": "create.err.41"
+    },
+    {
+      "name": "Corrected_ref.fasta.42"
+    },
+    {
+      "name": "create.err.42"
+    },
+    {
+      "name": "Corrected_ref.fasta.43"
+    },
+    {
+      "name": "create.err.43"
+    },
+    {
+      "name": "Corrected_ref.fasta.44"
+    },
+    {
+      "name": "create.err.44"
+    },
+    {
+      "name": "Corrected_ref.fasta.45"
+    },
+    {
+      "name": "create.err.45"
+    },
+    {
+      "name": "Corrected_ref.fasta.46"
+    },
+    {
+      "name": "create.err.46"
+    },
+    {
+      "name": "Corrected_ref.fasta.47"
+    },
+    {
+      "name": "create.err.47"
+    },
+    {
+      "name": "Corrected_ref.fasta.48"
+    },
+    {
+      "name": "create.err.48"
+    },
+    {
+      "name": "Corrected_ref.fasta.49"
+    },
+    {
+      "name": "create.err.49"
+    },
+    {
+      "name": "Corrected_ref.fasta.50"
+    },
+    {
+      "name": "create.err.50"
+    },
+    {
+      "name": "Corrected_ref.fasta.51"
+    },
+    {
+      "name": "create.err.51"
+    },
+    {
+      "name": "Corrected_ref.fasta.52"
+    },
+    {
+      "name": "create.err.52"
+    },
+    {
+      "name": "Corrected_ref.fasta.53"
+    },
+    {
+      "name": "create.err.53"
+    },
+    {
+      "name": "Corrected_ref.fasta.54"
+    },
+    {
+      "name": "create.err.54"
+    },
+    {
+      "name": "Corrected_ref.fasta.55"
+    },
+    {
+      "name": "create.err.55"
+    },
+    {
+      "name": "Corrected_ref.fasta.56"
+    },
+    {
+      "name": "create.err.56"
+    },
+    {
+      "name": "Corrected_ref.fasta.57"
+    },
+    {
+      "name": "create.err.57"
+    },
+    {
+      "name": "Corrected_ref.fasta.58"
+    },
+    {
+      "name": "create.err.58"
+    },
+    {
+      "name": "Corrected_ref.fasta.59"
+    },
+    {
+      "name": "create.err.59"
+    },
+    {
+      "name": "Corrected_ref.fasta.60"
+    },
+    {
+      "name": "create.err.60"
+    },
+    {
+      "name": "Corrected_ref.fasta.61"
+    },
+    {
+      "name": "create.err.61"
+    },
+    {
+      "name": "Corrected_ref.fasta.62"
+    },
+    {
+      "name": "create.err.62"
+    },
+    {
+      "name": "Corrected_ref.fasta.63"
+    },
+    {
+      "name": "create.err.63"
+    },
+    {
+      "name": "Corrected_ref.fasta.64"
+    },
+    {
+      "name": "create.err.64"
+    },
+    {
+      "name": "Corrected_ref.fasta.65"
+    },
+    {
+      "name": "create.err.65"
+    },
+    {
+      "name": "Corrected_ref.fasta.66"
+    },
+    {
+      "name": "create.err.66"
+    },
+    {
+      "name": "Corrected_ref.fasta.67"
+    },
+    {
+      "name": "create.err.67"
+    },
+    {
+      "name": "Corrected_ref.fasta.68"
+    },
+    {
+      "name": "create.err.68"
+    },
+    {
+      "name": "Corrected_ref.fasta.69"
+    },
+    {
+      "name": "create.err.69"
+    },
+    {
+      "name": "Corrected_ref.fasta.70"
+    },
+    {
+      "name": "create.err.70"
+    },
+    {
+      "name": "Corrected_ref.fasta.71"
+    },
+    {
+      "name": "create.err.71"
+    },
+    {
+      "name": "Corrected_ref.fasta.72"
+    },
+    {
+      "name": "create.err.72"
+    },
+    {
+      "name": "Corrected_ref.fasta.73"
+    },
+    {
+      "name": "create.err.73"
+    },
+    {
+      "name": "Corrected_ref.fasta.74"
+    },
+    {
+      "name": "create.err.74"
+    },
+    {
+      "name": "Corrected_ref.fasta.75"
+    },
+    {
+      "name": "create.err.75"
+    },
+    {
+      "name": "Corrected_ref.fasta.76"
+    },
+    {
+      "name": "create.err.76"
+    },
+    {
+      "name": "Corrected_ref.fasta.77"
+    },
+    {
+      "name": "create.err.77"
+    },
+    {
+      "name": "Corrected_ref.fasta.78"
+    },
+    {
+      "name": "create.err.78"
+    },
+    {
+      "name": "Corrected_ref.fasta.79"
+    },
+    {
+      "name": "create.err.79"
+    },
+    {
+      "name": "Corrected_ref.fasta.80"
+    },
+    {
+      "name": "create.err.80"
+    },
+    {
+      "name": "Corrected_ref.fasta.81"
+    },
+    {
+      "name": "create.err.81"
+    },
+    {
+      "name": "Corrected_ref.fasta.82"
+    },
+    {
+      "name": "create.err.82"
+    },
+    {
+      "name": "Corrected_ref.fasta.83"
+    },
+    {
+      "name": "create.err.83"
+    },
+    {
+      "name": "Corrected_ref.fasta.84"
+    },
+    {
+      "name": "create.err.84"
+    },
+    {
+      "name": "Corrected_ref.fasta.85"
+    },
+    {
+      "name": "create.err.85"
+    },
+    {
+      "name": "Corrected_ref.fasta.86"
+    },
+    {
+      "name": "create.err.86"
+    },
+    {
+      "name": "Corrected_ref.fasta.87"
+    },
+    {
+      "name": "create.err.87"
+    },
+    {
+      "name": "Corrected_ref.fasta.88"
+    },
+    {
+      "name": "create.err.88"
+    },
+    {
+      "name": "Corrected_ref.fasta.89"
+    },
+    {
+      "name": "create.err.89"
+    },
+    {
+      "name": "Corrected_ref.fasta.90"
+    },
+    {
+      "name": "create.err.90"
+    },
+    {
+      "name": "Corrected_ref.fasta.91"
+    },
+    {
+      "name": "create.err.91"
+    },
+    {
+      "name": "Corrected_ref.fasta.92"
+    },
+    {
+      "name": "create.err.92"
+    },
+    {
+      "name": "Corrected_ref.fasta.93"
+    },
+    {
+      "name": "create.err.93"
+    },
+    {
+      "name": "Corrected_ref.fasta.94"
+    },
+    {
+      "name": "create.err.94"
+    },
+    {
+      "name": "Corrected_ref.fasta.95"
+    },
+    {
+      "name": "create.err.95"
+    },
+    {
+      "name": "Corrected_ref.fasta.96"
+    },
+    {
+      "name": "create.err.96"
+    },
+    {
+      "name": "Corrected_ref.fasta.97"
+    },
+    {
+      "name": "create.err.97"
+    },
+    {
+      "name": "Corrected_ref.fasta.98"
+    },
+    {
+      "name": "create.err.98"
+    },
+    {
+      "name": "Corrected_ref.fasta.99"
+    },
+    {
+      "name": "create.err.99"
+    },
+    {
+      "name": "Corrected_ref.fasta"
+    }
+  ],
+  "ins": [
+    0,
+    7,
+    108,
+    316
+  ],
+  "outs": [
+    1,
+    310,
+    312,
+    314,
+    315,
+    317,
+    327,
+    328,
+    430,
+    432,
+    434,
+    436,
+    438,
+    440,
+    442,
+    444,
+    446,
+    448,
+    450,
+    452,
+    454,
+    456,
+    458,
+    460,
+    462,
+    464,
+    466,
+    468,
+    470,
+    472,
+    474,
+    476,
+    478,
+    480,
+    482,
+    484,
+    486,
+    488,
+    490,
+    492,
+    494,
+    496,
+    498,
+    500,
+    502,
+    504,
+    506,
+    508,
+    510,
+    512,
+    514,
+    516,
+    518,
+    520,
+    522,
+    524,
+    526,
+    528,
+    530,
+    532,
+    534,
+    536,
+    538,
+    540,
+    542,
+    544,
+    546,
+    548,
+    550,
+    552,
+    554,
+    556,
+    558,
+    560,
+    562,
+    564,
+    566,
+    568,
+    570,
+    572,
+    574,
+    576,
+    578,
+    580,
+    582,
+    584,
+    586,
+    588,
+    590,
+    592,
+    594,
+    596,
+    598,
+    600,
+    602,
+    604,
+    606,
+    608,
+    610,
+    612,
+    614,
+    616,
+    618,
+    620,
+    622,
+    624,
+    626,
+    628,
+    629
+  ]
+}

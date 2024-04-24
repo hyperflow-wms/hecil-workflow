@@ -2,7 +2,7 @@ FROM alpine:3.13 as builder
 MAINTAINER Bartosz Balis <balis@agh.edu.pl>
 
 # Version of the job executor should be passed via docker build, e.g.: 
-# docker build --build-arg hf_job_executor_version="1.1.4""
+# docker build --build-arg hf_job_executor_version="1.3.4""
 ARG hf_job_executor_version
 ENV HYPERFLOW_JOB_EXECUTOR_VERSION=$hf_job_executor_version
 

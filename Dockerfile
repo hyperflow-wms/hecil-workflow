@@ -34,6 +34,10 @@ COPY --from=builder /bwa-src/bwa /usr/local/bin
 COPY --from=builder /samtools/bin/samtools /usr/local/bin
 COPY software/* /usr/local/bin/
 
+# Copying scripts from Windows corrupts newlines what affects the shebang mechanism inside the scripts.
+# Using dos2unix can fix the newlines.
+CMD dos2unix /usr/local/bin/*
+
 # Required for running NodeJS application as process with non primary PID.
 # NodeJS application with PID 1 are not properly receiving signals like SIGTERM
 # https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#handling-kernel-signals
